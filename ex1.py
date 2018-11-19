@@ -66,3 +66,19 @@ def my_expo_mod(g,n,N):
     return h
 
 #2.a
+def first_test(N):
+    for i in range(2,math.floor(math.sqrt(N))+1):
+        if N % i == 0:
+            return False
+    return True
+
+#2.b
+# complexité linéaire O(n)
+
+#2.c
+def count_prime(K=10000):
+    cnt = 0
+    for i in range(1,K):
+        if first_test(i):
+            cnt += 1
+    return cnt

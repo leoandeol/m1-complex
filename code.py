@@ -175,4 +175,16 @@ def test_test_fermat(K=100000, N=1000):
 
 #Exercice 4
 #4.a
-
+def test_miller_rabin(n, T):
+    a = randrange(2,n)
+    b = pow(a,m,n)
+    if b!= 1 and b!= n-1:
+        j = 1
+        while j < h and b != n-1:
+            if (b*b)%n == 1:
+                return False
+            b = (b*b)%n
+            j = j+1
+        if b != n-1:
+            return False
+    return True
